@@ -3,11 +3,6 @@ import { useEffect } from "react";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
-export const metadata = {
-  title: "SemWise - Smart Notes for Smarter Learning",
-  description: "Ace Every Semester with SemWise!",
-};
-
 export default function RootLayout({ children }) {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
@@ -26,7 +21,6 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <head>
-          <link rel="manifest" href="/manifest.json" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
